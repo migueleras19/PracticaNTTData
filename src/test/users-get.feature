@@ -26,3 +26,4 @@ Feature: Prueba de NttData para el puesto de QA Automation
     When method GET
     Then status 200
     And match response == [{id: 5, name: 'Kitty update', status: 'sold'}]
+

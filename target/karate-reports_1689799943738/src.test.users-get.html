@@ -30,7 +30,7 @@
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2023-07-19 03:52:29 p. m.</div>
+    <div>2023-07-19 12:41:16 p. m.</div>
   </div>        
 </div>
 
@@ -71,7 +71,7 @@
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1983</span>
+              <span>ms:</span>&nbsp;<span>958</span>
             </div>
           </div>
           <div class="step-row">
@@ -94,7 +94,7 @@
         <span>*</span>&nbsp;<span>def baseUrl = &#39;https://petstore.swagger.io/v2&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">399</div>
+    <div class="time-cell passed">51</div>
   </div>
 
    
@@ -122,7 +122,7 @@
         <span>Given</span>&nbsp;<span>url baseUrl + &#39;/pet&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">48</div>
+    <div class="time-cell passed">33</div>
   </div>
 
    
@@ -150,7 +150,7 @@
         <span>And</span>&nbsp;<span>request {id: 5, name: &#39;Kitty&#39;, status: &#39;available&#39;}</span>
       </div>
     </div>
-    <div class="time-cell passed">34</div>
+    <div class="time-cell passed">24</div>
   </div>
 
    
@@ -178,7 +178,7 @@
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">1502</div>
+    <div class="time-cell passed">851</div>
   </div>
 
    
@@ -187,7 +187,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.8">15:52:27.319 request:
+  <div class="preformatted" data-parent="0.8">12:41:14.492 request:
 1 &gt; POST https://petstore.swagger.io/v2/pet
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 44
@@ -197,9 +197,9 @@
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty&quot;,&quot;status&quot;:&quot;available&quot;}
 
-15:52:28.134 response time in milliseconds: 812
+12:41:15.162 response time in milliseconds: 665
 1 &lt; 200
-1 &lt; Date: Wed, 19 Jul 2023 20:52:27 GMT
+1 &lt; Date: Wed, 19 Jul 2023 17:41:14 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -257,7 +257,7 @@
               </div>
             </div>
             <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>401</span>
+              <span>ms:</span>&nbsp;<span>366</span>
             </div>
           </div>
           <div class="step-row">
@@ -280,7 +280,7 @@
         <span>*</span>&nbsp;<span>def baseUrl = &#39;https://petstore.swagger.io/v2&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -308,7 +308,7 @@
         <span>Given</span>&nbsp;<span>url baseUrl + &#39;/pet/1&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -336,7 +336,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">297</div>
+    <div class="time-cell passed">275</div>
   </div>
 
    
@@ -345,7 +345,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.13">15:52:28.162 request:
+  <div class="preformatted" data-parent="0.13">12:41:15.207 request:
 1 &gt; GET https://petstore.swagger.io/v2/pet/1
 1 &gt; Host: petstore.swagger.io
 1 &gt; Connection: Keep-Alive
@@ -353,9 +353,9 @@
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-15:52:28.447 response time in milliseconds: 285
+12:41:15.477 response time in milliseconds: 269
 1 &lt; 200
-1 &lt; Date: Wed, 19 Jul 2023 20:52:27 GMT
+1 &lt; Date: Wed, 19 Jul 2023 17:41:14 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -412,7 +412,7 @@
         <span>And</span>&nbsp;<span>match response == { id: 5, name: &#39;Kitty&#39;, status: &#39;available&#39;, category: &#39;#ignore&#39;, photoUrls: &#39;#ignore&#39;, tags: &#39;#ignore&#39; }</span>
       </div>
     </div>
-    <div class="time-cell failed">102</div>
+    <div class="time-cell failed">85</div>
   </div>
 
    
@@ -421,7 +421,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.15">15:52:28.560 src/test/users-get.feature:15
+  <div class="preformatted" data-parent="0.15">12:41:15.566 src/test/users-get.feature:15
 And match response == { id: 5, name: &#39;Kitty&#39;, status: &#39;available&#39;, category: &#39;#ignore&#39;, photoUrls: &#39;#ignore&#39;, tags: &#39;#ignore&#39; }
 match failed: EQUALS
   $ | not equal | match failed for name: &#39;id&#39; (MAP:MAP)
@@ -453,7 +453,7 @@ src/test/users-get.feature:15
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>253</span>
+              <span>ms:</span>&nbsp;<span>251</span>
             </div>
           </div>
           <div class="step-row">
@@ -532,7 +532,7 @@ src/test/users-get.feature:15
         <span>And</span>&nbsp;<span>request {id: 5, name: &#39;Kitty update&#39;, status: &#39;sold&#39;}</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -560,7 +560,7 @@ src/test/users-get.feature:15
         <span>When</span>&nbsp;<span>method PUT</span>
       </div>
     </div>
-    <div class="time-cell passed">251</div>
+    <div class="time-cell passed">249</div>
   </div>
 
    
@@ -569,7 +569,7 @@ src/test/users-get.feature:15
 
   
 
-  <div class="preformatted" data-parent="0.20">15:52:28.575 request:
+  <div class="preformatted" data-parent="0.20">12:41:15.595 request:
 1 &gt; PUT https://petstore.swagger.io/v2/pet
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 46
@@ -579,9 +579,9 @@ src/test/users-get.feature:15
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;status&quot;:&quot;sold&quot;}
 
-15:52:28.822 response time in milliseconds: 246
+12:41:15.838 response time in milliseconds: 243
 1 &lt; 200
-1 &lt; Date: Wed, 19 Jul 2023 20:52:28 GMT
+1 &lt; Date: Wed, 19 Jul 2023 17:41:14 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -639,7 +639,7 @@ src/test/users-get.feature:15
               </div>
             </div>
             <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>255</span>
+              <span>ms:</span>&nbsp;<span>295</span>
             </div>
           </div>
           <div class="step-row">
@@ -690,7 +690,7 @@ src/test/users-get.feature:15
         <span>Given</span>&nbsp;<span>url baseUrl + &#39;/pet/findByStatus&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -718,7 +718,7 @@ src/test/users-get.feature:15
         <span>And</span>&nbsp;<span>param status = &#39;sold&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -746,7 +746,7 @@ src/test/users-get.feature:15
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">249</div>
+    <div class="time-cell passed">281</div>
   </div>
 
    
@@ -755,7 +755,7 @@ src/test/users-get.feature:15
 
   
 
-  <div class="preformatted" data-parent="0.26">15:52:28.850 request:
+  <div class="preformatted" data-parent="0.26">12:41:15.871 request:
 1 &gt; GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
 1 &gt; Host: petstore.swagger.io
 1 &gt; Connection: Keep-Alive
@@ -763,9 +763,9 @@ src/test/users-get.feature:15
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-15:52:29.092 response time in milliseconds: 242
+12:41:16.129 response time in milliseconds: 256
 1 &lt; 200
-1 &lt; Date: Wed, 19 Jul 2023 20:52:28 GMT
+1 &lt; Date: Wed, 19 Jul 2023 17:41:15 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -773,7 +773,7 @@ src/test/users-get.feature:15
 1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 &lt; Server: Jetty(9.2.9.v20150224)
-[{&quot;id&quot;:68,&quot;category&quot;:{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;},&quot;name&quot;:&quot;bagworm&quot;,&quot;photoUrls&quot;:[&quot;6NV0&quot;],&quot;tags&quot;:[{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854768964,&quot;category&quot;:{&quot;id&quot;:-20925210,&quot;name&quot;:&quot;consectetur&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;non Duis esse&quot;,&quot;Ut&quot;],&quot;tags&quot;:[{&quot;id&quot;:-11322956,&quot;name&quot;:&quot;eiusmod est esse&quot;},{&quot;id&quot;:7175563,&quot;name&quot;:&quot;qui est&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854768987,&quot;category&quot;:{&quot;id&quot;:-469294,&quot;name&quot;:&quot;culpa irure adipisi&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;id ea in&quot;,&quot;ex consectetur nostrud eu amet&quot;],&quot;tags&quot;:[{&quot;id&quot;:57175933,&quot;name&quot;:&quot;proident ullamco exercitation esse&quot;},{&quot;id&quot;:79346478,&quot;name&quot;:&quot;Duis tempor&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854768988,&quot;category&quot;:{&quot;id&quot;:-81556182,&quot;name&quot;:&quot;velit laborum&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;dolor laboris amet voluptate quis&quot;,&quot;cupidatat consectetur consequ&quot;],&quot;tags&quot;:[{&quot;id&quot;:-2593213,&quot;name&quot;:&quot;Duis amet velit sit pariatur&quot;},{&quot;id&quot;:51203760,&quot;name&quot;:&quot;veniam &quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854769403,&quot;category&quot;:{&quot;id&quot;:-10928166,&quot;name&quot;:&quot;veniam in amet officia&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;Ut dolor nisi&quot;,&quot;consectetur nulla exercitation esse in&quot;],&quot;tags&quot;:[{&quot;id&quot;:46174105,&quot;name&quot;:&quot;ipsum occaecat in cupidatat&quot;},{&quot;id&quot;:-97055673,&quot;name&quot;:&quot;dolor minim reprehenderit aliquip aliqua&quot;}],&quot;status&quot;:&quot;sold&quot;}]
+[{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854298836,&quot;category&quot;:{&quot;id&quot;:97228344,&quot;name&quot;:&quot;est magna&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;commodo cupidatat anim&quot;,&quot;et elit anim&quot;],&quot;tags&quot;:[{&quot;id&quot;:32742685,&quot;name&quot;:&quot;dolore dolor id&quot;},{&quot;id&quot;:-51765349,&quot;name&quot;:&quot;officia minim exercitation&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854298995,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Dog&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854299261,&quot;category&quot;:{&quot;id&quot;:-10928166,&quot;name&quot;:&quot;veniam in amet officia&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;Ut dolor nisi&quot;,&quot;consectetur nulla exercitation esse in&quot;],&quot;tags&quot;:[{&quot;id&quot;:46174105,&quot;name&quot;:&quot;ipsum occaecat in cupidatat&quot;},{&quot;id&quot;:-97055673,&quot;name&quot;:&quot;dolor minim reprehenderit aliquip aliqua&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:68,&quot;category&quot;:{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;},&quot;name&quot;:&quot;bagworm&quot;,&quot;photoUrls&quot;:[&quot;6NV0&quot;],&quot;tags&quot;:[{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;}],&quot;status&quot;:&quot;sold&quot;}]
 
 </div>   
 
@@ -794,7 +794,7 @@ src/test/users-get.feature:15
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -822,7 +822,7 @@ src/test/users-get.feature:15
         <span>And</span>&nbsp;<span>match response == [{id: 5, name: &#39;Kitty update&#39;, status: &#39;sold&#39;}]</span>
       </div>
     </div>
-    <div class="time-cell failed">2</div>
+    <div class="time-cell failed">7</div>
   </div>
 
    
@@ -831,11 +831,11 @@ src/test/users-get.feature:15
 
   
 
-  <div class="preformatted" data-parent="0.28">15:52:29.098 src/test/users-get.feature:28
+  <div class="preformatted" data-parent="0.28">12:41:16.155 src/test/users-get.feature:28
 And match response == [{id: 5, name: &#39;Kitty update&#39;, status: &#39;sold&#39;}]
 match failed: EQUALS
-  $ | not equal | actual array length is not equal to expected - 6:1 (LIST:LIST)
-  [{&quot;id&quot;:68,&quot;category&quot;:{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;},&quot;name&quot;:&quot;bagworm&quot;,&quot;photoUrls&quot;:[&quot;6NV0&quot;],&quot;tags&quot;:[{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854768964,&quot;category&quot;:{&quot;id&quot;:-20925210,&quot;name&quot;:&quot;consectetur&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;non Duis esse&quot;,&quot;Ut&quot;],&quot;tags&quot;:[{&quot;id&quot;:-11322956,&quot;name&quot;:&quot;eiusmod est esse&quot;},{&quot;id&quot;:7175563,&quot;name&quot;:&quot;qui est&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854768987,&quot;category&quot;:{&quot;id&quot;:-469294,&quot;name&quot;:&quot;culpa irure adipisi&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;id ea in&quot;,&quot;ex consectetur nostrud eu amet&quot;],&quot;tags&quot;:[{&quot;id&quot;:57175933,&quot;name&quot;:&quot;proident ullamco exercitation esse&quot;},{&quot;id&quot;:79346478,&quot;name&quot;:&quot;Duis tempor&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854768988,&quot;category&quot;:{&quot;id&quot;:-81556182,&quot;name&quot;:&quot;velit laborum&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;dolor laboris amet voluptate quis&quot;,&quot;cupidatat consectetur consequ&quot;],&quot;tags&quot;:[{&quot;id&quot;:-2593213,&quot;name&quot;:&quot;Duis amet velit sit pariatur&quot;},{&quot;id&quot;:51203760,&quot;name&quot;:&quot;veniam &quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854769403,&quot;category&quot;:{&quot;id&quot;:-10928166,&quot;name&quot;:&quot;veniam in amet officia&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;Ut dolor nisi&quot;,&quot;consectetur nulla exercitation esse in&quot;],&quot;tags&quot;:[{&quot;id&quot;:46174105,&quot;name&quot;:&quot;ipsum occaecat in cupidatat&quot;},{&quot;id&quot;:-97055673,&quot;name&quot;:&quot;dolor minim reprehenderit aliquip aliqua&quot;}],&quot;status&quot;:&quot;sold&quot;}]
+  $ | not equal | actual array length is not equal to expected - 5:1 (LIST:LIST)
+  [{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854298836,&quot;category&quot;:{&quot;id&quot;:97228344,&quot;name&quot;:&quot;est magna&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;commodo cupidatat anim&quot;,&quot;et elit anim&quot;],&quot;tags&quot;:[{&quot;id&quot;:32742685,&quot;name&quot;:&quot;dolore dolor id&quot;},{&quot;id&quot;:-51765349,&quot;name&quot;:&quot;officia minim exercitation&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854298995,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;Dog&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854299261,&quot;category&quot;:{&quot;id&quot;:-10928166,&quot;name&quot;:&quot;veniam in amet officia&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;Ut dolor nisi&quot;,&quot;consectetur nulla exercitation esse in&quot;],&quot;tags&quot;:[{&quot;id&quot;:46174105,&quot;name&quot;:&quot;ipsum occaecat in cupidatat&quot;},{&quot;id&quot;:-97055673,&quot;name&quot;:&quot;dolor minim reprehenderit aliquip aliqua&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:68,&quot;category&quot;:{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;},&quot;name&quot;:&quot;bagworm&quot;,&quot;photoUrls&quot;:[&quot;6NV0&quot;],&quot;tags&quot;:[{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;}],&quot;status&quot;:&quot;sold&quot;}]
   [{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;status&quot;:&quot;sold&quot;}]
 
 
