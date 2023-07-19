@@ -22,21 +22,30 @@
       <img src="karate-logo.svg" alt="Karate"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">1</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-pass" class="bg-success">2</div>
+      <div id="nav-fail" class="bg-danger">2</div>
     </div>
   </div>
   <div id="nav-type">
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2023-07-18 11:37:31 p. m.</div>
+    <div>2023-07-19 01:04:51 a. m.</div>
   </div>        
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
             <a href="#[1:5]"><span>[1:5]</span> <span>Añadir una mascota a la tienda</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2:11]"><span>[2:11]</span> <span>Consultar la mascota ingresada previamente (Búsqueda por ID))</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[3:17]"><span>[3:17]</span> <span>Actualizar el nombre de la mascota y el estatus de la mascota a “sold”</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4:23]"><span>[4:23]</span> <span>Consultar la mascota modificada por estatus (Búsqueda por estatus)</span></a>
           </div>
         </div>
       </div>
@@ -62,7 +71,7 @@
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1918</span>
+              <span>ms:</span>&nbsp;<span>1324</span>
             </div>
           </div>
           <div class="step-row">
@@ -85,7 +94,7 @@
         <span>*</span>&nbsp;<span>def baseUrl = &#39;https://petstore.swagger.io/v2&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">103</div>
+    <div class="time-cell passed">92</div>
   </div>
 
    
@@ -113,7 +122,7 @@
         <span>Given</span>&nbsp;<span>url baseUrl + &#39;/pet&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">26</div>
+    <div class="time-cell passed">31</div>
   </div>
 
    
@@ -138,10 +147,10 @@
       <div class="step-ref passed">7</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request {id: 1, name: &#39;Thor&#39;, status: &#39;available&#39;}</span>
+        <span>And</span>&nbsp;<span>request {id: 5, name: &#39;Kitty&#39;, status: &#39;available&#39;}</span>
       </div>
     </div>
-    <div class="time-cell passed">43</div>
+    <div class="time-cell passed">46</div>
   </div>
 
    
@@ -169,7 +178,7 @@
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">1731</div>
+    <div class="time-cell passed">1151</div>
   </div>
 
    
@@ -178,19 +187,19 @@
 
   
 
-  <div class="preformatted" data-parent="0.8">23:37:30.836 request:
+  <div class="preformatted" data-parent="0.8">01:04:49.916 request:
 1 &gt; POST https://petstore.swagger.io/v2/pet
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 43
+1 &gt; Content-Length: 44
 1 &gt; Host: petstore.swagger.io
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;id&quot;:1,&quot;name&quot;:&quot;Thor&quot;,&quot;status&quot;:&quot;available&quot;}
+{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty&quot;,&quot;status&quot;:&quot;available&quot;}
 
-23:37:31.924 response time in milliseconds: 1084
+01:04:50.636 response time in milliseconds: 717
 1 &lt; 200
-1 &lt; Date: Wed, 19 Jul 2023 04:37:32 GMT
+1 &lt; Date: Wed, 19 Jul 2023 06:04:51 GMT
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
 1 &lt; Connection: keep-alive
@@ -198,7 +207,7 @@
 1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 &lt; Server: Jetty(9.2.9.v20150224)
-{&quot;id&quot;:1,&quot;name&quot;:&quot;Thor&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;available&quot;}
+{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;available&quot;}
 
 </div>   
 
@@ -219,7 +228,7 @@
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">16</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -229,6 +238,609 @@
   
 
      
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:11]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:11]</span>
+                <span class="scenario-name">Consultar la mascota ingresada previamente (Búsqueda por ID))</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>429</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:11]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:11]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseUrl = &#39;https://petstore.swagger.io/v2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url baseUrl + &#39;/pet/1&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">397</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">01:04:50.656 request:
+1 &gt; GET https://petstore.swagger.io/v2/pet/1
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+01:04:51.050 response time in milliseconds: 394
+1 &lt; 200
+1 &lt; Date: Wed, 19 Jul 2023 06:04:51 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:1,&quot;category&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;available&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref failed">15</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == { id: 5, name: &#39;Kitty&#39;, status: &#39;available&#39;, category: &#39;#ignore&#39;, photoUrls: &#39;#ignore&#39;, tags: &#39;#ignore&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell failed">30</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">01:04:51.082 src/test/users-get.feature:15
+And match response == { id: 5, name: &#39;Kitty&#39;, status: &#39;available&#39;, category: &#39;#ignore&#39;, photoUrls: &#39;#ignore&#39;, tags: &#39;#ignore&#39; }
+match failed: EQUALS
+  $ | not equal | match failed for name: &#39;id&#39; (MAP:MAP)
+  {&quot;id&quot;:1,&quot;category&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;available&quot;}
+  {&quot;id&quot;:5,&quot;category&quot;:&quot;#ignore&quot;,&quot;name&quot;:&quot;Kitty&quot;,&quot;photoUrls&quot;:&quot;#ignore&quot;,&quot;tags&quot;:&quot;#ignore&quot;,&quot;status&quot;:&quot;available&quot;}
+
+    $.id | not equal (NUMBER:NUMBER)
+    1
+    5
+
+src/test/users-get.feature:15
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:17]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:17]</span>
+                <span class="scenario-name">Actualizar el nombre de la mascota y el estatus de la mascota a “sold”</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>410</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:17]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:17]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseUrl = &#39;https://petstore.swagger.io/v2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url baseUrl + &#39;/pet&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {id: 5, name: &#39;Kitty update&#39;, status: &#39;sold&#39;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method PUT</span>
+      </div>
+    </div>
+    <div class="time-cell passed">409</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.20">01:04:51.093 request:
+1 &gt; PUT https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 46
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;status&quot;:&quot;sold&quot;}
+
+01:04:51.499 response time in milliseconds: 406
+1 &lt; 200
+1 &lt; Date: Wed, 19 Jul 2023 06:04:52 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:23]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:23]</span>
+                <span class="scenario-name">Consultar la mascota modificada por estatus (Búsqueda por estatus)</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>478</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:23]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:23]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def baseUrl = &#39;https://petstore.swagger.io/v2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url baseUrl + &#39;/pet/findByStatus&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param status = &#39;sold&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">474</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.26">01:04:51.511 request:
+1 &gt; GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/18)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+01:04:51.982 response time in milliseconds: 470
+1 &lt; 200
+1 &lt; Date: Wed, 19 Jul 2023 06:04:52 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+[{&quot;id&quot;:74408294,&quot;category&quot;:{&quot;id&quot;:70278030,&quot;name&quot;:&quot;in adipisicing&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;nostrud sunt eu occaecat elit&quot;,&quot;esse aute non magna&quot;],&quot;tags&quot;:[{&quot;id&quot;:81618844,&quot;name&quot;:&quot;id aliquip&quot;},{&quot;id&quot;:-96817599,&quot;name&quot;:&quot;ut elit esse&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:737478080,&quot;name&quot;:&quot;KxfcTfmAKUaeJF&quot;,&quot;photoUrls&quot;:[&quot;ondPCQJVmhGv&quot;],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:68,&quot;category&quot;:{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;},&quot;name&quot;:&quot;bagworm&quot;,&quot;photoUrls&quot;:[&quot;6NV0&quot;],&quot;tags&quot;:[{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:123456,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;корги&quot;},&quot;name&quot;:&quot;иртыш&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref failed">28</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == [{id: 5, name: &#39;Kitty update&#39;, status: &#39;sold&#39;}]</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.28">01:04:51.985 src/test/users-get.feature:28
+And match response == [{id: 5, name: &#39;Kitty update&#39;, status: &#39;sold&#39;}]
+match failed: EQUALS
+  $ | not equal | actual array length is not equal to expected - 5:1 (LIST:LIST)
+  [{&quot;id&quot;:74408294,&quot;category&quot;:{&quot;id&quot;:70278030,&quot;name&quot;:&quot;in adipisicing&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;nostrud sunt eu occaecat elit&quot;,&quot;esse aute non magna&quot;],&quot;tags&quot;:[{&quot;id&quot;:81618844,&quot;name&quot;:&quot;id aliquip&quot;},{&quot;id&quot;:-96817599,&quot;name&quot;:&quot;ut elit esse&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:737478080,&quot;name&quot;:&quot;KxfcTfmAKUaeJF&quot;,&quot;photoUrls&quot;:[&quot;ondPCQJVmhGv&quot;],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:68,&quot;category&quot;:{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;},&quot;name&quot;:&quot;bagworm&quot;,&quot;photoUrls&quot;:[&quot;6NV0&quot;],&quot;tags&quot;:[{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:123456,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;корги&quot;},&quot;name&quot;:&quot;иртыш&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;}]
+  [{&quot;id&quot;:5,&quot;name&quot;:&quot;Kitty update&quot;,&quot;status&quot;:&quot;sold&quot;}]
+
+
+src/test/users-get.feature:28
+</div>   
 
   
 
