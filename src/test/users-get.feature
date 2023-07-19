@@ -14,13 +14,13 @@ Feature: Prueba de NttData para el puesto de QA Automation
     Then status 200
     And match response == { id: 5, name: 'Kitty', status: 'available', category: '#ignore', photoUrls: '#ignore', tags: '#ignore' }
 
-    Scenario: Actualizar el nombre de la mascota y el estatus de la mascota a “sold”
+  Scenario: Actualizar el nombre de la mascota y el estatus de la mascota a “sold”
     Given url baseUrl + '/pet'
     And request {id: 5, name: 'Kitty update', status: 'sold'}
     When method PUT
     Then status 200
 
-    Scenario: Consultar la mascota modificada por estatus (Búsqueda por estatus)
+  Scenario: Consultar la mascota modificada por estatus (Búsqueda por estatus)
     Given url baseUrl + '/pet/findByStatus'
     And param status = 'sold'
     When method GET
